@@ -1,0 +1,8 @@
+/*------------------------------ fonts css ----------------------------*/
+@font-face {font-family: 'Spyrogeometric'; src: url('fonts/Spyrogeometric.eot'); src: url('fonts/Spyrogeometric.eot?#iefix') format('embedded-opentype'), url('fonts/Spyrogeometric.woff2') format('woff2'), url('fonts/Spyrogeometric.woff') format('woff'), url('fonts/Spyrogeometric.svg#Spyrogeometric') format('svg'); font-weight: normal; font-style: normal;}
+@font-face{font-family: 'ArabicTypesetting'; src: url('fonts/ArabicTypesetting.eot'); src: url('fonts/ArabicTypesetting.eot?#iefix') format('embedded-opentype'), url('fonts/ArabicTypesetting.woff2') format('woff2'), url('fonts/ArabicTypesetting.woff') format('woff'), url('fonts/ArabicTypesetting.svg#ArabicTypesetting') format('svg'); font-weight: normal; font-style: normal;}
+@font-face {font-family: 'Allura'; src: url('fonts/Allura-Regular.eot'); src: url('fonts/Allura-Regular.eot?#iefix') format('embedded-opentype'), url('fonts/Allura-Regular.woff2') format('woff2'), url('fonts/Allura-Regular.woff') format('woff'), url('fonts/Allura-Regular.ttf') format('truetype'), url('fonts/Allura-Regular.svg#Allura-Regular') format('svg'); font-weight: normal; font-style: normal;}
+
+/*------------------------------ General css ----------------------------*/
+body{font-family:Verdana,Geneva,sans-serif; font-size: 12px}
+.navbar-brand{ font-family: 'Arial'}
