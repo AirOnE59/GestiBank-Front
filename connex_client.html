@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Gestibank</title>
+
+	<link href="public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" >
+	<link href="public/vendor/fontawesome/css/all.min.css" rel="stylesheet" type="text/css" >
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link href="public/css/agency.min.css" rel="stylesheet">
+	<link href="public/css/style.css" rel="stylesheet">
+	<style type="text/css">
+
+	@media (min-width: 992px) {
+		#mainNav {
+			background-color: grey;
+		}
+	}
+
+
+
+	.connex {
+		margin-top: 130px;
+	}
+	.form_inscription {
+		font-family: cursive;
+	}
+	form {
+		margin-top: 50px;
+		font-family: cursive;
+	}
+
+</style>
+</head>
+
+<body id="page-top">
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+		<div class="container">
+			<a class="navbar-brand js-scroll-trigger" href="#page-top">GestiBank</a>
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				Menu
+				<i class="fas fa-bars"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav text-uppercase ml-auto">
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="#">Informations</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="#">Devise</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="#">Contact</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="#">Espace client</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
+
+
+
+
+	<!-- CONNEXION -->
+
+	<div class="container connex">
+		<h2 class="form_inscription"> Formulaire d'inscription</h2>
+		<form onsubmit="return verify(this)" action="inscription" name="formulaire">
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="nom">Votre Nom :</label>
+				<div class="col-sm-12">
+					<input type="text" autofocus="on" minlength="2" maxlength="20" autocomplete="on" class="form-control" id="nom" placeholder="Dupont" name="nom" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="nom">Votre Prenom :</label>
+				<div class="col-sm-12">
+					<input type="text" class="form-control" maxlength="20" autocomplete="on" minlength="2" id="prenom" placeholder="Jean" name="prenom" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="email">Votre adresse Mail :</label>
+				<div class="col-sm-12">
+					<input type="email" class="form-control" minlength="5" autocomplete="on" maxlength="50" id="email" placeholder="jean.dupont@getstibank.com" name="email" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="pwd">Mot de passe :</label>
+				<div class="col-sm-12">          
+					<input type="password" class="form-control" autocomplete="off" minlength="8" maxlength="30" id="pwd" placeholder="Mot de passe" name="pwd" required>
+				</div>
+				<div class="col-sm-12">          
+					<input type="password" class="form-control" minlength="8" maxlength="30" autocomplete="off" id="pwd_conf" placeholder="Confirmation mot de passe" name="pwd_conf" required>
+				</div>
+				<div id="erreur_mdp"></div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-4" for="rue">Adresse de votre domicile :</label>
+				<div class="col-sm-12">
+					<input type="text" class="form-control" id="rue" autocomplete="on" placeholder="54 rue de la monnaie" name="rue" required>
+				</div>
+			</div>
+			<div class="form-inline">
+				<div class="form-group col-sm-4">
+					<input type="text" minlength="5" maxlength="5" autocomplete="on" class="form-control" id="cp" placeholder="59000" name="cp" required>
+				</div>
+				<div id="erreur_cp"></div>
+				<div class="form-group col-sm-4">
+					<input type="text" class="form-control" id="ville" autocomplete="on" placeholder="Lille" name="ville" required>
+				</div>
+				<div class="form-group col-sm-4">
+					<input type="text" class="form-control" id="complement" autocomplete="on" placeholder="Appartement 5" name="complement" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="tel">Votre N° de tel :</label>
+				<div class="col-sm-12">
+					<input type="text" class="form-control" minlength="10" maxlength="10" autocomplete="on" id="tel" placeholder="0607080910" name="tel" required>
+				</div>
+				<div id="erreur_tel"></div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-12">
+					<label class="control-label" for="domicile">Documents à fournir :</label>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<p>Justificatif de domicile (Facture de Gaz, Electricité, Internet...)</p>
+					</div>
+					<div class="col-md-6">
+						<input type="file" class="form-control" id="domicile" name="domicile" required>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<p>Fiche de paies (le mois précédent)</p>
+					</div>
+					<div class="col-md-6">
+						<input type="file" class="form-control" id="domicile" name="domicile" required>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="form-group">        
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" id="envoi" class="btn btn-primary btn-xl text-uppercase">Inscription</button>
+				</div>
+			</div>
+
+		</form>
+	</div>
+
+	<script type="text/javascript">
+
+		function verify() {
+
+
+			pwd = $("#pwd").val();
+			pwd_conf = $("#pwd_conf").val();
+
+			if(pwd != pwd_conf) {
+				$('#erreur_mdp').addClass('alert');
+				$('#erreur_mdp').addClass('alert-danger');
+				$('#erreur_mdp').html('<strong>Erreur</strong> Mot de passe différents.');
+				return false;
+			}
+
+			var numberReg = /^\d*$/;
+			tel = $("#tel").val();
+
+			if (!numberReg.test(tel)) {
+				$('#erreur_tel').addClass('alert');
+				$('#erreur_tel').addClass('alert-danger');
+				$('#erreur_tel').html('<strong>Erreur</strong> Le numéro de téléphone se compose uniquement de chiffre.');
+				return false;
+			}
+			var numberReg2 = /^\d*$/;
+			cp = $("#cp").val();
+
+			if (!numberReg2.test(cp)) {
+				$('#erreur_cp').addClass('alert');
+				$('#erreur_cp').addClass('alert-danger');
+				$('#erreur_cp').html('<strong>Erreur</strong> Le code postal se compose uniquement de chiffre.');
+				return false;
+			}
+			return true;
+		}
+
+		function tel() {
+			var numberReg = /^\d*$/;
+			tel = $("#tel").val();
+
+			if (!numberReg.test(tel)) {
+				$('#erreur_tel').addClass('alert');
+				$('#erreur_tel').addClass('alert-danger');
+				$('#erreur_tel').html('<strong>Erreur</strong> Le numéro de téléphone se compose uniquement de chiffre.');
+				return false;
+			}
+			return true;
+		}
+
+	</script>
+
+
+
+
+
+
+	<script src ="public/vendor/jquery/jquery.min.js"></script>
+	<script src ="public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src ="public/vendor/jquery-easing/jquery.easing.min.js"></script>
+	<script src ="public/js/agency/agency.min.js"></script>
+</body>
+</html>
