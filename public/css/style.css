@@ -2,6 +2,9 @@
 
 /*------------------------------ general css ----------------------------*/
 html, body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-style: normal;
 	/*width:100%;
 	margin:0;
 	padding:0;
@@ -11,25 +14,60 @@ body {
 	/*width:100%;
 	display:table;*/
 }
-/*------------------------------ header css ----------------------------*/
+i{
+	margin-right: 5px;
+}
+.leftside {
+	min-height: 800px;
+	background-color: #f9f9f9;
+	margin: 0;
+	padding: 0;
+}
+.content {
+	margin: 0;
+	padding: 0;
+}
+ul.side-nav li {
+	padding: 20px 0;
+	border-bottom: 1px solid #eee;
+	text-align: center;
+	cursor: pointer;
+}
+ul.side-nav li:hover, ul.side-nav li.active {
+	background-color: #ececec;
+	transition: background-color .5s;
+}
+ul.side-nav li a {
+	color: #0c0c0c;
+}
+ul.side-nav li a:hover {
+	text-decoration: none;
+}
+ul.side-nav li.numCompte {
+	padding: 20px;
+}
+ul.side-nav li.numCompte h4{
+	font-size: 18px;
+	text-align: left;
+}
+section {
+	padding: 25px;
+}
+	/*------------------------------ header css ----------------------------*/
 header.masthead {
-    background-image: url('../img/background.jpg');
+	background-image: url('../img/background.jpg');
 }
 header .mask {
-	background-color: #000000;
-	opacity: .6;
-	position: absolute;
-	top: 0;
-	left: 0;
+	background-color: rgba(0, 0, 0, 0.3);
 	width: 100%;
-	height: 100%;
 }
-header.masthead .intro-text {
-	z-index: 99999;
+nav#mainNav.navPage {
+	background-color: #212529;
+	/*padding: 0;*/
 }
+nav#mainNav.navPage .navbar-nav .nav-item .nav-link {
 
-/*------------------------------ admin css ----------------------------*/
-
+}
 /*------------------------------ form css ----------------------------*/
 
 
@@ -37,7 +75,24 @@ header.masthead .intro-text {
 
 
 /*------------------------------ footer css ----------------------------*/
-.bg-1 {
-	background-color: #494f59;
+footer h2.section-heading {
+	color: white;
+	font-weight: normal;
+	font-size: 26px;
+	margin-bottom: 25px;
 }
+footer ul li a, footer ul li i {
+	font-size: 14px;
+	color : #ffc500;
+}
+.bg-1 {
+	background-color: #212529;
+}
+footer .text-footer {
+	margin-top: 15px;
+	font-size: 11px;
+	color: white;
+	letter-spacing: normal;
+}
+
 /*------------------------------ home css ----------------------------*/
