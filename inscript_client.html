@@ -173,9 +173,11 @@
 			pwd_conf = $("#pwd_conf").val();
 
 			if(pwd != pwd_conf) {
-				$('#erreur_mdp').addClass('alert');
-				$('#erreur_mdp').addClass('alert-danger');
-				$('#erreur_mdp').html('<strong>Erreur</strong> Mot de passe différents.');
+				$('#pwd').addClass('alert');
+				$('#pwd').addClass('alert-danger');
+				$('#pwd_conf').addClass('alert');
+				$('#pwd_conf').addClass('alert-danger');
+				/*$('#erreur_mdp').html('<strong>Erreur</strong> Mot de passe différents.');*/
 				return false;
 			}
 
